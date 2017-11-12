@@ -1,0 +1,36 @@
+.Calendar {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.Calendar__header {
+    display: flex;
+    height: 40px;
+}
+
+.Calendar__header-week {
+    width: 150px;
+    min-width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.Calendar-person__timeline-row {
+    display: flex;
+    height: 40px;
+}
+
+.Calendar-person__timeline-block {
+    width: 150px;
+    min-width: 150px;
+    height: 100%;
+    border-right: 1px solid lightgray;
+
+}

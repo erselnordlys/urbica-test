@@ -1,0 +1,10 @@
+.App {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.Table {
+  display: flex;
+  max-width: 100%;
+}
