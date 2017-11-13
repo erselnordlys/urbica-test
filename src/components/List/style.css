@@ -37,7 +37,7 @@
     flex-direction: column;
     width: 310px;
     min-width: 310px;
-    padding: 0 0 0 30px;
+    padding: 0 0 20px 30px;
     font-size: 13px;
     border-right: 1px solid lightgray;
 }
@@ -45,7 +45,7 @@
 .List-person__name {
     border-radius: 21px;
     padding: 5px 13px;
-    margin-top: 16px;
+    margin-top: 15px;
     display: inline-flex;
     background: pink;
     color: #fff;

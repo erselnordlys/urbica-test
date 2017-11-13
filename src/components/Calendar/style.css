@@ -28,9 +28,25 @@
 }
 
 .Calendar-person__timeline-block {
+    position: relative;
     width: 150px;
     min-width: 150px;
     height: 100%;
     border-right: 1px solid lightgray;
+    background: pink;
+    opacity: 0;
+}
 
+.Calendar-person__timeline-rows:nth-of-type(odd) .Calendar-person__timeline-block {
+    background: lightblue;
+}
+
+.Calendar-person__timeline-block--color:first-of-type::before,
+.Calendar-person__timeline-block--color:last-of-type::before {
+    content: '';
+}
+
+.Calendar-person__timeline-block--color:first-of-type::after,
+.Calendar-person__timeline-block--color:last-of-type::after {
+    content: '';
 }
