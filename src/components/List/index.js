@@ -1,32 +1,21 @@
 import React, { Component } from 'react';
-// import ActionCreators from 'actions/ActionCreators';
+import PropTypes from 'prop-types';
 import './style.css';
 
 class List extends Component {
 
-    state = {
-        weeks: ['11 - 18', '20 - 27', '29 - 06', '08 - 25', '11 - 18', '20 - 27', '29 - 06', '08 - 25'],
-        persons: [{
-            'name': 'Тая',
-            'tasks': [{'title': 'Стили карты: анализ требований', 'percent-done': 25},
-                    {'title': 'Музей: визуализация данных', 'percent-done': 50},
-                    {'title': 'Платформа: тестовые слои', 'percent-done': 25}]
-            },
-            {
-                'name': 'Степан',
-                'tasks': [{'title': 'Стили карты: анализ требований', 'percent-done': 75},
-                    {'title': 'Музей: визуализация данных', 'percent-done': 100},
-                    {'title': 'Платформа: тестовые слои', 'percent-done': 25}]
-            }],
-    };
+    static PropTypes = {
+        persons: PropTypes.array,
+        weeks: PropTypes.array
+    }
 
     _renderPersonBlock = () => {
-        return this.state.persons.map((person, index) => {
+        return this.props.persons.map((person, index) => {
             let tasks = person.tasks.map((task, index) => {
                 return (
                     <div key={index} className="List-person__task">
-                        <div key={task['percent-done'].toString()}
-                             className="List-person__task-percent">{task['percent-done']} %
+                        <div key={task.done.toString()}
+                             className="List-person__task-percent">{task.done} %
                         </div>
                         <div key={task.title} className="List-person__task-title">{task.title}</div>
                     </div>

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import TableContainer from './TableContainer'
+import CalendarContainer from '../CalendarContainer';
+import ListContainer from '../ListContainer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <TableContainer/>
+        <ListContainer />
+        <CalendarContainer/>
       </div>
     );
   }

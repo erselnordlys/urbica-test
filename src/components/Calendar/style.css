@@ -12,6 +12,7 @@
 }
 
 .Calendar__header-week {
+    box-sizing: border-box;
     width: 150px;
     min-width: 150px;
     height: 100%;
@@ -27,26 +28,44 @@
     height: 40px;
 }
 
+.Calendar-person__timeline-row:last-of-type {
+    padding-bottom: 20px;
+}
+
 .Calendar-person__timeline-block {
     position: relative;
+    box-sizing: border-box;
     width: 150px;
     min-width: 150px;
     height: 100%;
     border-right: 1px solid lightgray;
-    background: pink;
-    opacity: 0;
+    background: rgb(255, 153, 153);
+    box-shadow: inset 0 -5px 0 white;
 }
 
 .Calendar-person__timeline-rows:nth-of-type(odd) .Calendar-person__timeline-block {
-    background: lightblue;
+    background: rgb(179, 217, 255);
 }
 
-.Calendar-person__timeline-block--color:first-of-type::before,
-.Calendar-person__timeline-block--color:last-of-type::before {
+.Calendar-person__timeline-block.first-of:before {
+    position: absolute;
+    left: 0;
     content: '';
+    height: 35px;
+    width: 10px;
+    background: rgba(255, 153, 153, 1);
 }
 
-.Calendar-person__timeline-block--color:first-of-type::after,
-.Calendar-person__timeline-block--color:last-of-type::after {
+.Calendar-person__timeline-block.last-of:after {
+    position: absolute;
+    right: 0;
     content: '';
+    height: 35px;
+    width: 10px;
+    background: rgba(255, 153, 153, 1);
+}
+
+.Calendar-person__timeline-rows:nth-of-type(odd) .Calendar-person__timeline-block:before,
+.Calendar-person__timeline-rows:nth-of-type(odd) .Calendar-person__timeline-block:after {
+    background: rgba(179, 217, 255, 1);
 }
