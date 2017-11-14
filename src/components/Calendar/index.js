@@ -61,7 +61,7 @@ class Calendar extends Component {
 
             }
         } else {
-            let counter = 0;
+            let counter = 0; // to know the start and end of task
             for (let j = 0; j < weeksNum; j++) {
 
                 // if there's a vacation
@@ -80,6 +80,7 @@ class Calendar extends Component {
                         order = 'first-of'
                     }
                     let opacity = tasks[taskNum - 1].done / 100;
+                    // pink or blue color
                     let style = index % 2 === 0 ? {background: "rgba(255, 153, 153, " + opacity + ")"} : {background: "rgba(179, 217, 255, " + opacity + ")"};
                     blocks.push(<div key={j + '-' + (taskNum - 1)}
                                      className={"Calendar-person__timeline-block " + order}
@@ -100,11 +101,6 @@ class Calendar extends Component {
         return this.props.weeks.map((week, index) =>
             <div key={index} className="Calendar__header-week">{week} окт.</div>)
     };
-
-    _updateTotalScore = (personIndex, weekIndex, totalScore) => {
-
-
-    }
 
     render() {
         return(
